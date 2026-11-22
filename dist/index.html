@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#173e48">
+  <title>TankShift · Campus water operations</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#dispatch">Skip to dispatch</a>
+  <header class="topbar">
+    <div class="brand">TankShift <span>Campus water operations</span></div>
+    <div class="top-actions"><span class="simulation">Simulated campus</span><button id="export" class="primary">Export dispatch</button></div>
+  </header>
+  <main>
+    <div class="page-heading">
+      <div><p class="eyebrow">TANKER DISPATCH / SIX-HOUR PLAN</p><h1 id="heading"></h1><p id="context" class="muted"></p></div>
+      <button id="demo" class="quiet">Try the 60-second demo <span aria-hidden="true">→</span></button>
+    </div>
+    <div class="scenario-bar"><nav aria-label="Dispatch scenarios"><button data-scenario="0">Morning rush</button><button data-scenario="1">Uncertain readings</button><button data-scenario="2">Late tanker</button></nav><button id="reset" class="quiet">Reset scenario</button></div>
+    <div id="walk" hidden></div>
+    <p id="status" class="status" role="status"></p>
+    <div class="dispatch-layout">
+      <section id="dispatch" class="sheet" aria-labelledby="dispatch-title">
+        <div class="section-heading"><div><p class="eyebrow">RECOMMENDED PLAN</p><h2 id="dispatch-title">Dispatch sheet</h2></div><span class="unit-note">All quantities in litres</span></div>
+        <div id="comparison" hidden></div>
+        <div id="dispatch-content"></div>
+      </section>
+      <aside id="inspection" class="inspection" aria-labelledby="inspection-title"></aside>
+    </div>
+    <div class="secondary-layout">
+      <section class="forecast" aria-labelledby="forecast-title"><div class="section-heading"><h2 id="forecast-title">Six-hour demand</h2><span class="unit-note">Campus total · L/hour</span></div><div id="forecast"></div></section>
+      <section class="planner" aria-labelledby="planner-title"><h2 id="planner-title">What-if planner</h2><p class="muted">Compare an alternative before changing this dispatch.</p><div class="preview-actions"><button data-preview="late">Tanker arrives 2 hours later</button><button data-preview="supply">Add 1,000 L</button><button data-preview="hot">3°C hotter</button></div><div id="preview" aria-live="polite"></div></section>
+    </div>
+    <details id="conditions" class="conditions"><summary>Edit conditions <span id="conditions-summary"></span></summary><form id="conditions-form"><p class="muted">Changes take effect when you apply them. Tank capacity: 8,000 L. Deliveries: 250 L increments.</p><div id="controls" class="controls-grid"></div><div id="tank-controls" class="tank-controls"></div><div class="form-actions"><button type="submit" class="primary">Apply conditions</button><span id="conditions-feedback" role="status"></span></div></form></details>
+    <section class="questions" aria-labelledby="questions-title"><div><h2 id="questions-title">Ask about this plan</h2><p class="muted">Offline scenario assistant. Answers use the current inputs and dispatch calculations.</p></div><div class="question-buttons"><button data-question="inspect" id="inspect-question"></button><button data-question="supply">Would another 1,000 L cover the shortage?</button><button data-question="late">What if the tanker arrives 2 hours later?</button></div><form id="ask-form"><label for="question">Your question</label><div class="ask-input"><input id="question" placeholder="For example: Why does West receive this amount?" required maxlength="300"><button type="submit">Ask</button></div></form><p id="answer" role="status" hidden></p></section>
+    <footer>TankShift Studio <span>Simulated inputs. Decision support for one tanker and three hostels.</span></footer>
+  </main>
+  <script src="model.js"></script><script src="engine.js"></script><script src="ui.js"></script>
+</body>
+</html>
