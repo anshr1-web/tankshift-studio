@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#173e48">
+  <title>TankShift · Campus water operations</title>
+  <style>:root{color-scheme:light;--paper:#f5f4ef;--ink:#202a2d;--muted:#596568;--petrol:#173e48;--teal:#397b80;--line:#d6dbd7;--amber:#93611f;--amber-bg:#f5ecd8;--white:#fffefa}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:14px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-variant-numeric:tabular-nums}button,input,select{font:inherit;color:inherit}button{border:1px solid #b7c2bf;border-radius:4px;background:var(--white);padding:9px 13px;min-height:42px;cursor:pointer;font-weight:600}button:hover{background:#e9eeeb}button.primary{background:var(--petrol);border-color:var(--petrol);color:#fff}button.primary:hover{background:#245560}button.quiet{background:transparent;border-color:transparent;color:var(--petrol)}button:disabled{opacity:.55;cursor:not-allowed}button:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible,a:focus-visible{outline:3px solid #b47828;outline-offset:3px}input,select{border:1px solid #a8b5b2;border-radius:4px;background:#fff;min-height:44px;padding:9px 10px;max-width:100%;width:100%}label{display:block;font-weight:600;font-size:13px}label input,label select{margin-top:5px}.skip{position:absolute;top:-100px;left:10px;background:white;padding:12px;z-index:3}.skip:focus{top:10px}.topbar{height:70px;border-bottom:1px solid var(--line);background:var(--white);padding:0 max(28px,calc((100vw - 1328px)/2));display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{font-size:22px;font-weight:760;letter-spacing:-.6px;white-space:nowrap}.brand span{font-size:13px;font-weight:400;letter-spacing:0;border-left:1px solid var(--line);margin-left:18px;padding-left:18px;color:var(--muted)}.top-actions{display:flex;gap:22px;align-items:center}.simulation{font-size:12px;color:var(--muted)}.simulation:before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:#b68946;margin-right:7px}main{max-width:1384px;padding:28px;margin:auto}.page-heading{display:flex;justify-content:space-between;gap:20px;align-items:center;margin-bottom:23px}.eyebrow{font-size:10px;letter-spacing:.12em;font-weight:700;color:var(--muted);margin:0 0 5px}h1{font-size:30px;line-height:1.25;letter-spacing:-.8px;margin:0 0 8px;font-weight:650}h2{font-size:18px;line-height:1.3;margin:0 0 10px;font-weight:650;letter-spacing:-.3px}h3{font-size:15px;margin:0 0 12px}p{margin:0 0 12px}.muted,.unit-note{color:var(--muted)}.unit-note{font-size:12px}.scenario-bar{display:flex;justify-content:space-between;gap:16px;align-items:center;margin-bottom:18px}nav{display:flex;gap:4px;border:1px solid var(--line);border-radius:5px;padding:3px;background:#eaece7}nav button{border-color:transparent;background:transparent;padding:6px 15px;min-height:36px;font-size:13px}nav button[aria-pressed=true]{background:var(--white);border-color:#b8c4c1;color:var(--petrol)}.dispatch-layout{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:22px;align-items:start}.sheet,.inspection{border:1px solid var(--line);background:var(--white);border-radius:6px;min-width:0}.section-heading{display:flex;align-items:center;justify-content:space-between;gap:16px}.sheet>.section-heading{padding:20px 22px 14px}.section-heading h2{margin-bottom:0}table{width:100%;border-collapse:collapse}th,td{text-align:right;border-bottom:1px solid var(--line);padding:15px 16px;vertical-align:middle}th:first-child,td:first-child{text-align:left}thead th{font-size:11px;font-weight:600;color:var(--muted);background:#f5f6f1;padding-top:10px;padding-bottom:10px}thead th span{display:block}tbody th{font-size:14px;font-weight:650;width:17%}tfoot th,tfoot td{font-weight:650;background:#f6f7f2;font-size:14px;border-bottom:0;padding-top:13px;padding-bottom:13px}.delivery{font-size:28px;letter-spacing:-.8px;font-weight:700;color:var(--petrol);white-space:nowrap}.forecast-number,.stock-number{font-size:16px;white-space:nowrap}.cell-detail{display:block;color:var(--muted);font-size:11px;line-height:1.5;font-weight:400;white-space:nowrap}.stock-cell{min-width:155px}.stock-meter{height:7px;background:#e1e7e3;position:relative;margin:7px 0;border-radius:1px}.stock-meter i{position:absolute;left:0;top:0;height:100%;background:var(--teal)}.stock-meter em{position:absolute;height:13px;top:-3px;border:1px solid var(--amber);background:#d8aa5977;min-width:2px}.uncertain{color:var(--amber)}.sheet-note{border-top:1px solid var(--line);padding:12px 22px;color:var(--muted);font-size:12px;display:flex;justify-content:space-between;gap:14px}.sheet-note p{margin:0}.inspection{padding:20px}.inspection .priority-name{font-size:24px;color:var(--petrol);letter-spacing:-.5px;margin:2px 0 10px}.benefit{background:var(--amber-bg);color:#775019;padding:4px 7px;border-radius:3px;font-size:12px;display:inline-block;margin-bottom:12px}.inspection p{font-size:13px}.ranking{list-style:none;margin:14px 0 18px;padding:0;border-top:1px solid var(--line)}.ranking li{display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid var(--line);font-size:12px}.reading-select{margin-bottom:10px}.reading-entry{display:flex;align-items:end;gap:8px}.reading-entry label{flex:1;min-width:0}.reading-entry button{white-space:nowrap;min-height:44px}.input-help{font-size:11px;color:var(--muted);margin:6px 0 0}.verified-note{color:var(--petrol)}.secondary-layout{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:38px;margin:28px 0}.forecast,.planner{min-width:0}.forecast svg{display:block;width:100%;height:auto;margin-top:12px}.chart-grid{stroke:var(--line);stroke-width:1}.chart-label{fill:var(--muted);font-size:12px}.chart-line{stroke:var(--teal);stroke-width:3;fill:none}.chart-dot{fill:var(--white);stroke:var(--teal);stroke-width:2}.chart-caption{font-size:12px;color:var(--muted);margin:6px 0}.preview-actions{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0}.planner>p{font-size:13px}.preview-box{border:1px solid #aabbb5;padding:16px;border-radius:4px;background:var(--white)}.preview-box table{font-size:12px;margin:12px 0}.preview-box th,.preview-box td{padding:8px}.preview-box p{font-size:13px}.preview-controls{display:flex;gap:8px}.preview-caption{font-size:12px;color:var(--muted)}.conditions{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:16px 0}summary{cursor:pointer;font-weight:650;min-height:28px;padding:3px 0}summary span{font-weight:400;color:var(--muted);font-size:12px;margin-left:20px}.controls-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin:18px 0 24px}.tank-controls{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}fieldset{border:1px solid var(--line);border-radius:4px;padding:16px;margin:0;min-width:0}legend{padding:0 6px;font-weight:600}fieldset label{margin:8px 0}.form-actions{display:flex;align-items:center;gap:16px;margin-top:18px}.form-actions span{font-size:12px;color:var(--muted)}#conditions-form>p{margin-top:12px}.questions{padding:24px 0}.questions p{font-size:13px}.question-buttons{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0}.question-buttons button{font-size:12px;font-weight:500}#ask-form{max-width:640px}.ask-input{display:flex;gap:8px;margin-top:5px}.ask-input input{min-width:0}#answer{max-width:850px;margin:16px 0 0;border-left:3px solid var(--teal);padding:8px 14px;background:#ecf1ec}footer{display:flex;justify-content:space-between;border-top:1px solid var(--line);padding:18px 0;font-size:11px;color:var(--muted)}#comparison{border-top:2px solid var(--teal);padding:16px 22px;background:#f0f5ef}#comparison p{font-size:13px}#comparison table{font-size:12px}#comparison th,#comparison td{padding:7px 8px;background:transparent}#comparison td{white-space:nowrap}.positive{color:#245e50}.negative{color:#775019}.status:empty{display:none}.status{font-size:13px;padding:9px 12px;background:#e8f0eb;border-left:3px solid var(--teal)}.tour{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:14px 18px;background:var(--amber-bg);border:1px solid #d7c69e;border-radius:4px;margin-bottom:18px}.tour p{margin:0;font-size:13px}.tour-actions{display:flex;gap:6px;flex-shrink:0}.error{color:#8e3328;background:#faece5;padding:10px;border-left:3px solid #a64532}[hidden]{display:none!important}
+@media(max-width:1100px) and (min-width:761px){main{padding:22px}.dispatch-layout{grid-template-columns:minmax(0,1fr) 280px;gap:14px}th,td{padding:14px 9px}.stock-cell{min-width:130px}.cell-detail{font-size:10px}.inspection{padding:16px}.brand span{margin-left:10px;padding-left:10px}}
+@media(max-width:760px){.topbar{height:auto;min-height:70px;padding:14px 16px;gap:10px;align-items:flex-start}.brand{font-size:21px}.brand span{display:block;border:0;padding:0;margin:0;font-size:10px;letter-spacing:0}.top-actions{gap:6px;align-items:flex-end;flex-direction:column}.simulation{font-size:10px}.top-actions button{font-size:12px;padding:7px 10px;min-height:36px}main{padding:22px 16px}.page-heading{display:block;margin-bottom:16px}.page-heading h1{font-size:27px}.page-heading .muted{font-size:12px;max-width:330px}.page-heading button{padding-left:0;min-height:34px;font-size:12px}.scenario-bar{display:block;margin-bottom:14px}nav{width:100%;gap:0}nav button{flex:1;font-size:11px;padding:6px;white-space:nowrap}.scenario-bar>#reset{font-size:12px;padding:5px 0;min-height:34px}.dispatch-layout,.secondary-layout{grid-template-columns:1fr;gap:16px}.sheet>.section-heading{padding:16px}.section-heading .unit-note{font-size:10px}#dispatch-table thead{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}#dispatch-table tbody{display:block}#dispatch-table tbody tr{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);padding:14px 16px;border-bottom:1px solid var(--line);gap:10px 16px}#dispatch-table tbody th{grid-column:1;grid-row:1;align-self:center;width:auto;padding:0;border:0}#dispatch-table tbody td{border:0;padding:0;min-width:0;text-align:left}#dispatch-table .delivery-cell{grid-column:2;grid-row:1;text-align:right}#dispatch-table .delivery-cell:before{content:'Deliver L';display:block;font-size:10px;color:var(--muted)}#dispatch-table .stock-cell{grid-column:1;grid-row:2 / span 2;min-width:0}#dispatch-table .stock-cell:before{content:'Tank reading L';display:block;color:var(--muted);font-size:10px}#dispatch-table .demand-cell{grid-column:2;grid-row:2;text-align:right}#dispatch-table .demand-cell:before{content:'Forecast demand L';display:block;font-size:10px;color:var(--muted)}#dispatch-table .unmet-cell{grid-column:2;grid-row:3;text-align:right;font-size:12px}#dispatch-table .unmet-cell:before{content:'Unmet L  ';color:var(--muted);font-size:10px}.delivery{font-size:27px}.stock-number,.forecast-number{font-size:15px}.cell-detail{font-size:10px}#dispatch-table tfoot{display:block}#dispatch-table tfoot tr{display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px;padding:12px 16px}#dispatch-table tfoot th,#dispatch-table tfoot td{padding:0;border:0;font-size:12px}#dispatch-table tfoot td.total-stock,#dispatch-table tfoot td.total-demand{display:none}#dispatch-table tfoot .total-delivery:before{content:'Deliver ';font-weight:400}#dispatch-table tfoot .total-unmet:before{content:'Unmet ';font-weight:400}.sheet-note{padding:12px 16px;display:block}.sheet-note p+p{margin-top:4px}.inspection{padding:18px}.secondary-layout{margin:24px 0;gap:26px}.controls-grid,.tank-controls{grid-template-columns:1fr;gap:12px}summary span{display:block;margin-left:16px;margin-top:4px}.question-buttons{flex-direction:column;align-items:stretch}.question-buttons button{text-align:left}.questions{padding:22px 0}.tour{display:block;padding:12px}.tour-actions{margin-top:10px}#comparison{padding:14px 12px}#comparison th,#comparison td{font-size:11px;padding:7px 3px}#comparison h3{font-size:14px}footer{display:block}footer span{display:block;margin-top:4px}.form-actions{align-items:flex-start;flex-direction:column}.preview-actions{gap:6px}.preview-actions button{font-size:12px}input,select{font-size:16px}}
+
+@media(max-width:760px){.chart-label{font-size:18px}.forecast svg{margin-top:16px}}
+</style>
+</head>
+<body>
+  <a class="skip" href="#dispatch">Skip to dispatch</a>
+  <header class="topbar">
+    <div class="brand">TankShift <span>Campus water operations</span></div>
+    <div class="top-actions"><span class="simulation">Simulated campus</span><button id="export" class="primary">Export dispatch</button></div>
+  </header>
+  <main>
+    <div class="page-heading">
+      <div><p class="eyebrow">TANKER DISPATCH / SIX-HOUR PLAN</p><h1 id="heading"></h1><p id="context" class="muted"></p></div>
+      <button id="demo" class="quiet">Try the 60-second demo <span aria-hidden="true">→</span></button>
+    </div>
+    <div class="scenario-bar"><nav aria-label="Dispatch scenarios"><button data-scenario="0">Morning rush</button><button data-scenario="1">Uncertain readings</button><button data-scenario="2">Late tanker</button></nav><button id="reset" class="quiet">Reset scenario</button></div>
+    <div id="walk" hidden></div>
+    <p id="status" class="status" role="status"></p>
+    <div class="dispatch-layout">
+      <section id="dispatch" class="sheet" aria-labelledby="dispatch-title">
+        <div class="section-heading"><div><p class="eyebrow">RECOMMENDED PLAN</p><h2 id="dispatch-title">Dispatch sheet</h2></div><span class="unit-note">All quantities in litres</span></div>
+        <div id="comparison" hidden></div>
+        <div id="dispatch-content"></div>
+      </section>
+      <aside id="inspection" class="inspection" aria-labelledby="inspection-title"></aside>
+    </div>
+    <div class="secondary-layout">
+      <section class="forecast" aria-labelledby="forecast-title"><div class="section-heading"><h2 id="forecast-title">Six-hour demand</h2><span class="unit-note">Campus total · L/hour</span></div><div id="forecast"></div></section>
+      <section class="planner" aria-labelledby="planner-title"><h2 id="planner-title">What-if planner</h2><p class="muted">Compare an alternative before changing this dispatch.</p><div class="preview-actions"><button data-preview="late">Tanker arrives 2 hours later</button><button data-preview="supply">Add 1,000 L</button><button data-preview="hot">3°C hotter</button></div><div id="preview" aria-live="polite"></div></section>
+    </div>
+    <details id="conditions" class="conditions"><summary>Edit conditions <span id="conditions-summary"></span></summary><form id="conditions-form"><p class="muted">Changes take effect when you apply them. Tank capacity: 8,000 L. Deliveries: 250 L increments.</p><div id="controls" class="controls-grid"></div><div id="tank-controls" class="tank-controls"></div><div class="form-actions"><button type="submit" class="primary">Apply conditions</button><span id="conditions-feedback" role="status"></span></div></form></details>
+    <section class="questions" aria-labelledby="questions-title"><div><h2 id="questions-title">Ask about this plan</h2><p class="muted">Offline scenario assistant. Answers use the current inputs and dispatch calculations.</p></div><div class="question-buttons"><button data-question="inspect" id="inspect-question"></button><button data-question="supply">Would another 1,000 L cover the shortage?</button><button data-question="late">What if the tanker arrives 2 hours later?</button></div><form id="ask-form"><label for="question">Your question</label><div class="ask-input"><input id="question" placeholder="For example: Why does West receive this amount?" required maxlength="300"><button type="submit">Ask</button></div></form><p id="answer" role="status" hidden></p></section>
+    <footer>TankShift Studio <span>Simulated inputs. Decision support for one tanker and three hostels.</span></footer>
+  </main>
+  <script>const MODEL = {"weights": [1.787728264270588, 3.3550917884421683, 2.571818208187457, 0.09448555768838252], "lo": -2.8417244417191845, "hi": 2.0910524197811338, "mae": 1.4458960736393012, "coverage": 0.7619047619047619};
+</script><script>const CAP=8000, UNIT=250;
+function predict(s){
+ return s.people.map(n=>Array.from({length:6},(_,k)=>{
+  const h=s.hour+k,w=MODEL.weights;
+  return n*(w[0]+w[1]*Math.exp(-(((h-8)/2.2)**2))+w[2]*Math.exp(-(((h-19)/2.8)**2))+w[3]*(s.temp-28));
+ }));
+}
+function solve(s, confirmed={}){
+ const hourly=predict(s), count=Math.floor(s.load/UNIT);
+ const options=hourly.map((hs,i)=>{
+  const total=hs.reduce((a,b)=>a+b,0), early=hs.slice(0,s.delay).reduce((a,b)=>a+b,0);
+  const band=s.error[i], stocks=i in confirmed?[confirmed[i]]:[-band,0,band].map(delta=>Math.min(CAP,Math.max(0,s.stock[i]+delta)));
+  return Array.from({length:count+1},(_,q)=>{
+   let loss=0;
+   for(const stock of stocks){
+    const remaining=Math.max(0,stock-early);
+    if(remaining+q*UNIT>CAP+1e-8)return Infinity;
+    loss+=(Math.max(0,early-stock)+Math.max(0,total-early-remaining-q*UNIT))/stocks.length;
+   }return loss;
+  });
+ });
+ let best,loss=Infinity,fair=Infinity,used=-1;
+ const totals=hourly.map(h=>h.reduce((a,b)=>a+b,0));
+ for(let a=0;a<=count;a++)for(let b=0;b<=count-a;b++){
+  // Extra water never increases shortage. Use the largest feasible last drop.
+  let c=count-a-b;
+  while(c>0&&!Number.isFinite(options[2][c]))c--;
+  const split=[a,b,c], gaps=split.map((q,i)=>options[i][q]);
+  const sum=gaps.reduce((x,y)=>x+y), worst=Math.max(...gaps.map((v,i)=>v/totals[i]));
+  if(!Number.isFinite(sum))continue;
+  if(sum<loss-1e-7 || (Math.abs(sum-loss)<1e-7 && (worst<fair-1e-8 || (Math.abs(worst-fair)<1e-8 && a+b+c>used)))){
+   best=split;loss=sum;fair=worst;used=a+b+c;
+  }
+ }
+ const equal=[0,0,0];let left=count;
+ while(left){let changed=false;for(let i=0;i<3&&left;i++)if(Number.isFinite(options[i][equal[i]+1])){equal[i]++;left--;changed=true;}if(!changed)break;}
+ return {best:best.map(q=>q*UNIT),loss,gaps:best.map((q,i)=>options[i][q]),baseline:equal.reduce((n,q,i)=>n+options[i][q],0),hourly,totals,unused:(count-used)*UNIT};
+}
+function readingValues(s,p){
+ return s.error.map((band,i)=>{
+  if(!band)return 0;
+  const after=[-band,0,band].map(v=>solve(s,{[i]:Math.max(0,Math.min(CAP,s.stock[i]+v))}).loss);
+  return Math.max(0,p.loss-after.reduce((a,b)=>a+b)/3);
+ });
+}
+</script><script>/* UI state is separate from the unchanged forecast and allocation engine. */
+const names = ['East hostel', 'West hostel', 'Annexe'];
+const scenarioNames = ['Morning rush', 'Uncertain readings', 'Late tanker'];
+const base = {people:[210,160,85], stock:[1300,3200,2300], error:[0,0,0], hour:6, temp:34, load:3000, delay:0};
+const presets = [base, {...base, stock:[3500,3000,1800], error:[1800,500,250]}, {...base, temp:38, delay:3, stock:[600,2800,2100]}];
+const $ = id => document.getElementById(id);
+const fmt = n => Math.round(n).toLocaleString('en-IN');
+const signed = n => (n > 0 ? '+' : n < 0 ? '−' : '') + fmt(Math.abs(n));
+const time = hour => String(hour % 24).padStart(2, '0') + ':00';
+const sum = values => values.reduce((a,b) => a+b, 0);
+let active = 1, state, plan, scores, comparison = null, preview = null, walking = false, previewTrigger = null;
+
+function loadScenario(i) {
+  active = i;
+  state = structuredClone(presets[i]);
+  comparison = null;
+  preview = null;
+  $('status').textContent = '';
+  render();
+}
+
+function field(label, key, value, min, max, step=1) {
+  return `<label>${label}<input type="number" required data-key="${key}" value="${value}" min="${min}" max="${max}" step="${step}"></label>`;
+}
+
+function renderConditions() {
+  $('controls').innerHTML = `<label>Forecast starts<select data-key="hour">${[6,12,17].map(h => `<option value="${h}" ${state.hour===h?'selected':''}>${time(h)}</option>`).join('')}</select></label>` +
+    field('Temperature °C','temp',state.temp,24,40) + field('Tanker load L','load',state.load,0,12000,250) + field('Arrival delay (hours)','delay',state.delay,0,6);
+  $('tank-controls').innerHTML = names.map((name,i) => `<fieldset><legend>${name}</legend>${field('Residents','people.'+i,state.people[i],1,1000)}${field('Tank reading L','stock.'+i,state.stock[i],0,CAP)}${field('Reading uncertainty ± L','error.'+i,state.error[i],0,4000)}</fieldset>`).join('');
+  $('conditions-summary').textContent = `${state.temp}°C · arrival delay ${state.delay} h · ${fmt(sum(state.people))} residents`;
+  $('conditions-feedback').textContent = '';
+}
+
+function stockCell(i) {
+  const low = Math.max(0,state.stock[i]-state.error[i]);
+  const high = Math.min(CAP,state.stock[i]+state.error[i]);
+  return `<span class="stock-number">${fmt(state.stock[i])}</span><span class="cell-detail ${state.error[i]?'uncertain':''}">${state.error[i] ? '± '+fmt(state.error[i])+' L sensor uncertainty' : 'No reading uncertainty'}</span><div class="stock-meter" role="img" aria-label="${names[i]}: ${fmt(state.stock[i])} litres reported; possible stock ${fmt(low)} to ${fmt(high)} litres; capacity ${fmt(CAP)} litres"><i style="width:${100*state.stock[i]/CAP}%"></i>${state.error[i]?`<em style="left:${100*low/CAP}%;width:${100*(high-low)/CAP}%"></em>`:''}</div><span class="cell-detail">${fmt(low)}–${fmt(high)} / ${fmt(CAP)} L</span>`;
+}
+
+function forecastRange(i) {
+  return [Math.max(0,plan.totals[i]+MODEL.lo*state.people[i]), plan.totals[i]+MODEL.hi*state.people[i]];
+}
+
+function renderDispatch() {
+  $('dispatch-content').innerHTML = `<table id="dispatch-table"><caption hidden>Recommended deliveries for ${scenarioNames[active]}. Forecast range is calibrated demand uncertainty; stock range is sensor uncertainty.</caption><thead><tr><th scope="col">Destination</th><th scope="col">Tank reading L</th><th scope="col">Forecast demand L<span>six hours · calibrated range</span></th><th scope="col">Deliver L</th><th scope="col">Unmet L<span>expected</span></th></tr></thead><tbody>${names.map((name,i) => `<tr><th scope="row">${name}</th><td class="stock-cell">${stockCell(i)}</td><td class="demand-cell"><span class="forecast-number">${fmt(plan.totals[i])}</span><span class="cell-detail">${forecastRange(i).map(fmt).join('–')} L</span></td><td class="delivery-cell"><strong class="delivery">${fmt(plan.best[i])}</strong></td><td class="unmet-cell">${fmt(plan.gaps[i])}</td></tr>`).join('')}</tbody><tfoot><tr><th scope="row">Total</th><td class="total-stock">${fmt(sum(state.stock))}</td><td class="total-demand">${fmt(sum(plan.totals))}</td><td class="total-delivery">${fmt(sum(plan.best))} L</td><td class="total-unmet">${fmt(plan.loss)} L</td></tr></tfoot></table><div class="sheet-note"><p><b>${fmt(sum(plan.best))} L</b> dispatched / ${fmt(state.load)} L available · ${fmt(plan.unused)} L retained</p><p>Capacity ${fmt(CAP)} L per tank · drops of ${UNIT} L</p></div>`;
+  renderComparison();
+}
+
+function movementExplanation() {
+  const changes = plan.best.map((n,i) => n-comparison.best[i]);
+  const sources = names.filter((_,i) => changes[i]<0);
+  const gains = names.map((name,i) => changes[i]>0 ? `${name} gains ${fmt(changes[i])} L` : '').filter(Boolean);
+  const released = -sum(changes.filter(n=>n<0));
+  const received = sum(changes.filter(n=>n>0));
+  let message = '';
+  if(released && received) message = `${fmt(Math.min(released,received))} L redirected from ${sources.join(' and ')}; ${gains.join(' and ')}.`;
+  else if(released) message = `${fmt(released)} L removed from deliveries to ${sources.join(' and ')} and retained on the tanker.`;
+  else if(received) message = `${gains.join(' and ')} from water previously retained on the tanker.`;
+  else message = 'Delivery quantities are unchanged after this verified reading.';
+  if(released && received && released!==received) message += ` Water retained on the tanker ${released>received?'increases':'decreases'} by ${fmt(Math.abs(released-received))} L.`;
+  return `${message} Tanker supply remains ${fmt(state.load)} L.`;
+}
+
+function renderComparison() {
+  $('comparison').hidden = !comparison;
+  if(!comparison) { $('comparison').replaceChildren(); return; }
+  $('comparison').innerHTML = `<h3 tabindex="-1">Delivery changes after verification</h3><p>${movementExplanation()}</p><table id="comparison-table"><thead><tr><th scope="col">Hostel</th><th scope="col">Previous L</th><th scope="col">Revised L</th><th scope="col">Change L</th></tr></thead><tbody>${names.map((name,i) => {const delta=plan.best[i]-comparison.best[i];return `<tr><th scope="row">${name}</th><td>${fmt(comparison.best[i])}</td><td>${fmt(plan.best[i])}</td><td class="${delta>0?'positive':delta<0?'negative':''}">${signed(delta)}</td></tr>`;}).join('')}</tbody><tfoot><tr><th scope="row">Total</th><td>${fmt(sum(comparison.best))}</td><td>${fmt(sum(plan.best))}</td><td>${signed(sum(plan.best)-sum(comparison.best))}</td></tr></tfoot></table>`;
+}
+
+function renderInspection() {
+  const rank = scores.map((value,i)=>({value,i})).sort((a,b)=>b.value-a.value);
+  const top = rank[0], useful = top.value>=.5;
+  $('inspection').innerHTML = `<p class="eyebrow">MEASURE BEFORE DISPATCH</p><h2 id="inspection-title">${useful?'Check this tank first':'No priority inspection'}</h2>${useful?`<p class="priority-name">${names[top.i]}</p><span class="benefit">${fmt(top.value)} L expected shortage preventable</span><p>Checking ${names[top.i]} has the largest calculated benefit: knowing its stock lets the same ${fmt(state.load)} L supply be allocated with less expected shortage.</p>`:`<p>A new reading has less than 1 L of rounded expected dispatch benefit under these conditions. You can still record a verified reading.</p>`}<ol class="ranking" aria-label="Inspection benefit ranking">${rank.map(({value,i})=>`<li><span>${names[i]}</span><b>${fmt(value)} L</b></li>`).join('')}</ol><form id="verify-form"><label class="reading-select">Tank to verify<select id="verify-tank">${names.map((name,i)=>`<option value="${i}" ${i===top.i?'selected':''}>${name}</option>`).join('')}</select></label><div class="reading-entry"><label>Verified stock (L)<input id="actual" type="number" min="0" max="8000" step="1" value="${state.stock[top.i]}" required></label><button class="primary" type="submit">Apply reading</button></div><p class="input-help">0–8,000 L · verification removes sensor uncertainty</p><p id="reading-error" class="error" role="alert" hidden></p></form>`;
+  $('verify-tank').onchange = () => { $('actual').value=state.stock[+$('verify-tank').value]; $('reading-error').hidden=true; };
+  $('actual').oninput = () => { $('reading-error').hidden=true; };
+  $('actual').oninvalid = () => { $('reading-error').textContent='Enter a whole-number reading between 0 and 8,000 L.'; $('reading-error').hidden=false; };
+  $('verify-form').onsubmit = event => {
+    event.preventDefault();
+    if(!$('verify-form').reportValidity()) return;
+    const i=+$('verify-tank').value, actual=+$('actual').value;
+    comparison={best:plan.best.slice(), hostel:i, reading:actual};
+    state.stock[i]=actual; state.error[i]=0;
+    render();
+    $('status').textContent=`${names[i]} verified at ${fmt(actual)} L. Dispatch recalculated using the verified stock estimate.`;
+    $('comparison').querySelector('h3').focus({preventScroll:true});
+    $('comparison').scrollIntoView({block:'nearest'});
+  };
+  $('inspect-question').textContent = useful ? `Why inspect ${names[top.i].split(' ')[0]} first?` : 'Is any tank worth inspecting?';
+}
+
+function renderForecast() {
+  const hours=plan.hourly[0].map((_,j)=>sum(plan.hourly.map(h=>h[j])));
+  const peak=hours.indexOf(Math.max(...hours));
+  const ceiling=Math.ceil(Math.max(...hours)/500)*500;
+  const x=i=>82+i*96, y=value=>142-112*value/ceiling;
+  $('forecast').innerHTML=`<svg viewBox="0 0 600 177" role="img" aria-label="Campus hourly demand: ${hours.map((n,i)=>`${time(state.hour+i)} ${fmt(n)} litres`).join('; ')}"><title>Six-hour campus demand in litres per hour</title>${[0,ceiling/2,ceiling].map(n=>`<line class="chart-grid" x1="82" x2="562" y1="${y(n)}" y2="${y(n)}"/><text class="chart-label" x="70" y="${y(n)+4}" text-anchor="end">${fmt(n)}</text>`).join('')}<polyline class="chart-line" points="${hours.map((n,i)=>`${x(i)},${y(n)}`).join(' ')}"/>${hours.map((n,i)=>`<circle class="chart-dot" cx="${x(i)}" cy="${y(n)}" r="4"><title>${time(state.hour+i)} · ${fmt(n)} L/hour</title></circle><text class="chart-label" x="${x(i)}" y="166" text-anchor="middle">${time(state.hour+i)}</text>`).join('')}</svg><p class="chart-caption">Peak ${time(state.hour+peak)} · <b>${fmt(hours[peak])} L/hour</b>. Six-hour total ${fmt(sum(plan.totals))} L.</p><p class="chart-caption">Demand ranges in the dispatch sheet are calibrated forecasts. Amber stock marks show current reading uncertainty, a separate input.</p>`;
+}
+
+function alternative(kind) {
+  const specs={late:{key:'delay',amount:2,max:6,label:'Arrival delay',unit:'hours'}, supply:{key:'load',amount:1000,max:12000,label:'Tanker load',unit:'L'}, hot:{key:'temp',amount:3,max:40,label:'Temperature',unit:'°C'}};
+  const spec=specs[kind];
+  if(!spec) return {error:'Choose one of the supported alternatives.'};
+  if(state[spec.key]+spec.amount>spec.max) return {error:`${spec.label} is ${fmt(state[spec.key])} ${spec.unit}. This alternative would exceed the ${fmt(spec.max)} ${spec.unit} input limit. Current dispatch is unchanged.`};
+  const next=structuredClone(state); next[spec.key]+=spec.amount;
+  return {state:next, plan:solve(next), spec};
+}
+
+function showPreview(kind, trigger) {
+  previewTrigger=trigger;
+  preview=alternative(kind);
+  if(preview.error){$('preview').innerHTML=`<p class="error">${preview.error}</p><button id="preview-cancel">Dismiss</button>`;}
+  else {
+    const next=preview.plan, spec=preview.spec;
+    $('preview').innerHTML=`<div class="preview-box"><h3>Current plan → preview</h3><p class="preview-caption">${spec.label}: ${fmt(state[spec.key])} → ${fmt(preview.state[spec.key])} ${spec.unit}</p><p>Expected shortage <b>${fmt(plan.loss)} → ${fmt(next.loss)} L</b> (${signed(next.loss-plan.loss)} L)</p><table id="preview-table"><thead><tr><th>Deliver L</th><th>Current</th><th>Preview</th><th>Change</th></tr></thead><tbody>${names.map((name,i)=>`<tr><th>${name}</th><td>${fmt(plan.best[i])}</td><td>${fmt(next.best[i])}</td><td>${signed(next.best[i]-plan.best[i])}</td></tr>`).join('')}</tbody></table><p class="preview-caption">Supply ${fmt(preview.state.load)} L · ${fmt(next.unused)} L retained. Current plan stays in place until Apply.</p><div class="preview-controls"><button id="preview-apply" class="primary">Apply</button><button id="preview-cancel">Cancel</button></div></div>`;
+    $('preview-apply').onclick=()=>{
+      state=preview.state; comparison=null; walking=false;
+      render(); $('status').textContent='Alternative applied. Dispatch, forecast and inspection priority recalculated.';
+      previewTrigger?.focus({preventScroll:true});
+    };
+  }
+  $('preview-cancel').onclick=()=>{preview=null;$('preview').replaceChildren();previewTrigger?.focus({preventScroll:true});};
+}
+
+function inspectionAnswer() {
+  const i=scores.indexOf(Math.max(...scores));
+  if(scores[i]<.5)return 'No reading has at least 1 L of rounded expected dispatch benefit under these conditions.';
+  return `${names[i]} ranks first at ${fmt(scores[i])} L of expected shortage preventable. The calculation compares the current plan with re-optimised plans after its low, reported and high stock readings, weighted equally. Supply stays at ${fmt(state.load)} L; better information changes where it is delivered.`;
+}
+function alternativeAnswer(kind) {
+  const result=alternative(kind);
+  if(result.error)return result.error;
+  return `With ${result.spec.label.toLowerCase()} at ${fmt(result.state[result.spec.key])} ${result.spec.unit}, expected shortage becomes ${fmt(result.plan.loss)} L (${signed(result.plan.loss-plan.loss)} L). ${result.plan.loss<1e-7?'This covers predicted demand in all modelled stock cases.':'Some expected shortage remains.'} Deliveries: ${names.map((name,i)=>`${name} ${fmt(result.plan.best[i])} L`).join('; ')}. This answer does not change your dispatch.`;
+}
+function answerQuestion(question) {
+  const q=question.trim().toLowerCase();
+  let answer;
+  if(q==='supply'||/another|extra|1,?000|supply/.test(q))answer=alternativeAnswer('supply');
+  else if(q==='late'||/late|delay/.test(q))answer=alternativeAnswer('late');
+  else if(q==='inspect'||/inspect|measure|check/.test(q))answer=inspectionAnswer();
+  else if(/why|deliver|receiv/.test(q)) {
+    const i=names.findIndex(name=>q.includes(name.split(' ')[0].toLowerCase()));
+    answer=i<0?'Name a hostel: for example, “Why does West receive this amount?”':`${names[i]} has ${fmt(state.stock[i])} L reported stock ± ${fmt(state.error[i])} L and ${fmt(plan.totals[i])} L forecast demand. Its ${fmt(plan.best[i])} L delivery is part of the feasible campus allocation with the least expected unmet demand, then the lowest worst proportional hostel shortage. Expected unmet demand here is ${fmt(plan.gaps[i])} L; arrival delay is ${state.delay} hours.`;
+  } else answer='I can explain a named hostel’s delivery, inspection priority, a two-hour arrival delay, or an extra 1,000 L. Try one of the questions above.';
+  $('answer').textContent=answer; $('answer').hidden=false;
+}
+
+function renderWalk() {
+  $('walk').hidden=!walking;
+  if(!walking){$('walk').replaceChildren();return;}
+  const message=comparison ? `3 / 3 · ${movementExplanation()} Compare the rows below or export this dispatch.` : '1 / 3 · Compare the inspection benefits. 2 / 3 · Select East hostel, enter 5,300 L in Verified stock, then Apply reading to see the allocation change.';
+  $('walk').innerHTML=`<div class="tour"><div><b>60-second dispatch walkthrough</b><p>${message}</p></div><div class="tour-actions"><button id="demo-restart">Restart</button><button id="demo-exit">Exit</button></div></div>`;
+  $('demo-restart').onclick=startDemo;
+  $('demo-exit').onclick=()=>{walking=false;renderWalk();$('demo').focus();};
+}
+function startDemo(){walking=true;loadScenario(1);$('actual').focus({preventScroll:true});}
+
+function dispatchCSV() {
+  const headers=['Hostel','Residents','Tank reading L','Reading uncertainty +/- L','Forecast demand L','Forecast low L','Forecast high L','Deliver L','Expected unmet L','Scenario','Start hour','Temperature C','Tanker load L','Arrival delay hours','Retained on tanker L'];
+  if(comparison)headers.push('Previous delivery L','Revised delivery L','Change L');
+  const rows=names.map((name,i)=>{
+    const row=[name,state.people[i],state.stock[i],state.error[i],Math.round(plan.totals[i]),...forecastRange(i).map(Math.round),plan.best[i],Math.round(plan.gaps[i]),scenarioNames[active],state.hour,state.temp,state.load,state.delay,plan.unused];
+    if(comparison)row.push(comparison.best[i],plan.best[i],plan.best[i]-comparison.best[i]);
+    return row;
+  });
+  return [headers,...rows].map(row=>row.map(value=>'"'+String(value).replaceAll('"','""')+'"').join(',')).join('\r\n');
+}
+
+function render() {
+  plan=solve(state); scores=readingValues(state,plan);
+  preview=null; $('preview').replaceChildren();
+  $('answer').textContent=''; $('answer').hidden=true; $('question').value='';
+  $('heading').textContent=`${time(state.hour)} dispatch`;
+  $('context').textContent=`Forecast ${time(state.hour)}–${time(state.hour+6)} · Tanker ${fmt(state.load)} L · ${names.length} destinations`;
+  document.querySelectorAll('[data-scenario]').forEach(b=>b.setAttribute('aria-pressed',String(+b.dataset.scenario===active)));
+  renderDispatch(); renderInspection(); renderForecast(); renderConditions(); renderWalk();
+}
+
+$('conditions-form').onsubmit=event=>{
+  event.preventDefault();
+  if(!$('conditions-form').reportValidity())return;
+  const next=structuredClone(state);
+  document.querySelectorAll('[data-key]').forEach(input=>{const [key,index]=input.dataset.key.split('.');if(index===undefined)next[key]=+input.value;else next[key][index]=+input.value;});
+  state=next;comparison=null;walking=false;render();
+  $('status').textContent='Conditions applied. Dispatch recalculated.';
+  $('conditions-feedback').textContent='Conditions applied.';
+};
+$('conditions-form').addEventListener('input',()=>{$('conditions-feedback').textContent='Unapplied changes — current dispatch is unchanged.';});
+$('conditions-form').addEventListener('invalid',()=>{$('conditions-feedback').textContent='Check the highlighted value and its limits. Current dispatch is unchanged.';},true);
+document.querySelectorAll('[data-scenario]').forEach(b=>b.onclick=()=>{walking=false;loadScenario(+b.dataset.scenario);});
+$('reset').onclick=()=>{walking=false;loadScenario(active);$('status').textContent='Scenario reset. Verified readings and comparison cleared.';};
+document.querySelectorAll('[data-preview]').forEach(b=>b.onclick=()=>showPreview(b.dataset.preview,b));
+document.querySelectorAll('[data-question]').forEach(b=>b.onclick=()=>answerQuestion(b.dataset.question));
+$('ask-form').onsubmit=event=>{event.preventDefault();answerQuestion($('question').value);};
+$('demo').onclick=startDemo;
+$('export').onclick=()=>{
+  const url=URL.createObjectURL(new Blob([dispatchCSV()],{type:'text/csv;charset=utf-8'}));
+  const anchor=document.createElement('a');anchor.href=url;anchor.download='TankShift-dispatch.csv';anchor.click();setTimeout(()=>URL.revokeObjectURL(url),1000);
+};
+loadScenario(1);
+</script>
+</body>
+</html>
